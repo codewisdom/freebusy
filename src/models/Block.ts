@@ -15,7 +15,7 @@ export class Block implements BlockLikeObject {
 
     this.start = convertToDataTime(start);
     this.end = convertToDataTime(end);
-    /** Troubleshooting potential defect
+
     if (this.start.isValid === false) {
       throw new Error('start value is invalid.');
     }
@@ -26,7 +26,6 @@ export class Block implements BlockLikeObject {
     if (this.start > this.end) {
       throw new Error('start is after then end.');
     }
-    */
   }
 
   public clone(): Block {
